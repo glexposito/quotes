@@ -1,4 +1,4 @@
-function App() {
+export default function App() {
   return (
     <div className="App">
       <main className="px-3">
@@ -8,5 +8,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

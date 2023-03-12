@@ -1,4 +1,4 @@
-function Header() {
+export default function Header() {
   return (
     <header className="mb-auto">
       <div>
@@ -7,5 +7,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
