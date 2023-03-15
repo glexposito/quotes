@@ -15,26 +15,19 @@ jobs:
   runs-on: ubuntu-latest
 
   steps:
-    - name: Checkout to the repository
-    uses: actions/checkout@v2
-    
-  - name: Set up NodeJS environment
+  - name: Checkout
+    uses: actions/checkout@master
+
+  - name: Set up Node
     uses: actions/setup-node@v2
     with:
       node-version-file: '.nvmrc'
 
-  - uses: borales/actions-yarn@v2.0.0
-    with:
-      cmd: install
+  - name: Install dependencies
+    run: yarn install --frozen-lockfile
 
-  - uses: borales/actions-yarn@v2.0.0
-    with:
-      cmd: build
+  - name: Lint
+    run: yarn lint
 
-  - uses: borales/actions-yarn@v2.0.0
-    with:
-      cmd: lint
-
-  - uses: borales/actions-yarn@v2.0.0
-    with:
-      cmd: test
+  - name: Test
+    run: yarn test
