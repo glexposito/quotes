@@ -9,25 +9,29 @@ on:
       - main
       
 jobs:
-  build:
-    name: Build and test
+      install-and-test:
+        runs-on: ubuntu-latest
 
-  runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          node-version: [8.x, 10.x, 12.x, 14.x, 16.x, 18.x]
 
-  steps:
-  - name: Checkout
-    uses: actions/checkout@master
+      steps:
+        - uses: actions/checkout@master
 
-  - name: Set up Node
-    uses: actions/setup-node@v2
-    with:
-      node-version-file: '.nvmrc'
+        - name: Set up Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@master
+          with:
+            node-version: ${{ matrix.node-version }}
 
-  - name: Install dependencies
-    run: yarn install --frozen-lockfile
+        - name: Install packages
+          run: yarn install --frozen-lockfile
 
-  - name: Lint
-    run: yarn lint
+        - name: Lint
+          run: yarn lint
 
-  - name: Test
-    run: yarn test
+        - name: Test
+          run: yarn test
+
+          env:
+            CI: true
