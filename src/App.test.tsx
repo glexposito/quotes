@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import App from './App';
 
 describe('App', () => {
-  it('should render App component conrrectly', () => {
+  it('should render App component correctly', () => {
     render(<App />);
     const element = screen.getByRole('main');
     expect(element).toBeInTheDocument();
