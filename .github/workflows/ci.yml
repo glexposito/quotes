@@ -12,6 +12,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
+        
   name: Build & test ${{ matrix.node-version }}
 
   steps:
