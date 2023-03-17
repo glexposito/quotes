@@ -7,13 +7,12 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-
+  build-test:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [18.x]
+    name: Build & test ${{ matrix.node-version }}
 
     steps:
     - uses: actions/checkout@v3
