@@ -1,16 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Layout from './Layout';
-import App from './App';
 
 describe('Layout', () => {
   it('should render Children component correctly', () => {
     render(
       <Layout>
-        <App />
+        return(<h1>children</h1>)
       </Layout>
     );
-    const element = screen.getByRole('main');
+    const element = screen.getByText('children');
     expect(element).toBeInTheDocument();
   });
 });

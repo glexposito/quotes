@@ -1,10 +1,12 @@
+import { QueryClient, QueryClientProvider } from 'react-query';
+import Quote from './components/Quote';
+
+const queryClient = new QueryClient();
+
 export default function App() {
   return (
-    <div className="App">
-      <main className="px-3">
-        <h1>Aristotle</h1>
-        <p className="lead">Knowing yourself is the beginning of all wisdom.</p>
-      </main>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <Quote />
+    </QueryClientProvider>
   );
 }
