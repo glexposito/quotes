@@ -1,35 +1,33 @@
 import { useRandomQuoteQuery } from './quoteQuery';
 
 export default function Quote() {
-  const { isLoading, error, data } = useRandomQuoteQuery();
+  const { isLoading, isError, data } = useRandomQuoteQuery();
 
-  let content;
-
-  if (isLoading) {
-    content = (
-      <div className="text-center">
-        <div className="spinner-border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
+  const renderLoading = () => (
+    <div className="text-center">
+      <div className="spinner-border" role="status">
+        <span className="visually-hidden">Loading...</span>
       </div>
-    );
-  } else if (error) {
-    content = (
-      <>
-        <p className="lead">
-          <i className="bi bi-emoji-frown-fill px-2"></i>
-          Well this is embarrassing, there was an error getting your random quote.
-        </p>
-      </>
-    );
-  } else {
-    content = (
-      <>
-        <h1>{data.author}</h1>
-        <p className="lead">{data.content}</p>
-      </>
-    );
-  }
+    </div>
+  );
+
+  const renderError = () => (
+    <>
+      <p className="lead">
+        <i className="bi bi-emoji-frown-fill px-2"></i>
+        Well this is embarrassing, there was an error getting your random quote.
+      </p>
+    </>
+  );
+
+  const renderQuote = () => (
+    <>
+      <h1>{data.author}</h1>
+      <p className="lead">{data.content}</p>
+    </>
+  );
+
+  const content = isLoading ? renderLoading() : isError ? renderError() : renderQuote();
 
   return (
     <div className="App">
