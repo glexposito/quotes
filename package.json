@@ -22,7 +22,7 @@
     "@swc/core": "^1.4.17",
     "@swc/jest": "^0.2.36",
     "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^14.2.2",
+    "@testing-library/react": "^15.0.5",
     "@types/jest": "^29.5.12",
     "@types/node": "*",
     "@types/react": "^18.2.79",
