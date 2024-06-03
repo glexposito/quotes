@@ -10,6 +10,10 @@ updates:
     schedule:
       interval: "weekly"
     groups:
-      update-types:
-      - "minor"
-      - "patch"
+      default:
+        applies-to: version-updates
+        patterns:
+        - "*"
+        update-types:
+        - "minor"
+        - "patch"
