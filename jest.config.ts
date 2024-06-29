@@ -3,6 +3,7 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   transformIgnorePatterns: [],
   testEnvironment: 'jsdom',
+  modulePathIgnorePatterns: ["spec"],
   transform: {
     '.*\\.(tsx?|jsx?)$': [
       '@swc/jest',
