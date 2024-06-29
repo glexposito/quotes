@@ -16,12 +16,6 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-
-    - name: Read a variable
-      run: echo "My S3_URL value is ${{ vars.S3_URL }}"
-
-    - name: Read an env variable
-      run: echo "My S3_URL value is ${{ env.S3_URL }}"
     
     - name: Install dependencies
       run: npm install -g yarn && yarn
@@ -30,11 +24,11 @@ jobs:
       run: yarn playwright install --with-deps
     
     - name: Run Playwright tests
-      run: URL=$env:S3_URL yarn playwright test
+      run: URL=${{ vars.S3_URL }} yarn playwright test
     
     - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: playwright-report
         path: playwright-report/
-        retention-days: 10
+        retention-days: 1
