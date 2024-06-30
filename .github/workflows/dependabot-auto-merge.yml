@@ -26,6 +26,7 @@ jobs:
           GH_TOKEN: ${{ secrets.AUTO_MERGE_TOKEN }}
 
   merge:
+    needs: approve
     runs-on: ubuntu-latest
     name: Merge
     if: github.actor == 'dependabot[bot]'
