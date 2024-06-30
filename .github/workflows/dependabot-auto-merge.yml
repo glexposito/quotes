@@ -9,7 +9,7 @@ permissions:
 jobs:
   approve:
     runs-on: ubuntu-latest
-    name: Approve Dependabot PR
+    name: Approve
     if: github.actor == 'dependabot[bot]'
 
     steps:
@@ -27,7 +27,7 @@ jobs:
 
   merge:
     runs-on: ubuntu-latest
-    name: Merge Dependabot PR
+    name: Merge
     if: github.actor == 'dependabot[bot]'
     
     steps:
