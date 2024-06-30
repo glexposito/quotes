@@ -13,11 +13,15 @@ A simple web app that displays a random quote every time the page is visited.
 
 In the project directory, you can run:
 
-### `yarn dev`
+```console
+yarn dev
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+Runs the app in the development mode. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-### `yarn test`
 
-Launches the test runner.\
+```console
+yarn test
+```
+
+Launches the test runner.
