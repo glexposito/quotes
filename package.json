@@ -21,7 +21,7 @@
   "devDependencies": {
     "@playwright/test": "^1.45.3",
     "@popperjs/core": "^2.11.6",
-    "@swc/core": "^1.7.3",
+    "@swc/core": "^1.7.6",
     "@swc/jest": "^0.2.36",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.4.8",
@@ -42,7 +42,7 @@
     "jest-environment-jsdom": "^29.5.0",
     "prettier": "^3.3.3",
     "react-query": "^3.39.3",
-    "ts-jest": "^29.2.3",
+    "ts-jest": "^29.2.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "vite": "^5.3.5"
