@@ -1,45 +1,29 @@
 name: Dependabot Auto Merge
 
-on: pull_request
+on: 
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: write
   pull-requests: write
-  
+
 jobs:
-  approve:
+  auto-merge:
     runs-on: ubuntu-latest
-    name: Approve
+    name: Auto Merge Dependabot PRs
     if: github.actor == 'dependabot[bot]'
 
     steps:
-      - name: Dependabot metadata
+      - name: Fetch Dependabot Metadata
         id: metadata
         uses: dependabot/fetch-metadata@v2
         with:
           github-token: "${{ secrets.AUTO_MERGE_TOKEN }}"
-          
-      - name: Approve a PR
-        run: gh pr review --approve "$PR_URL"
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ secrets.AUTO_MERGE_TOKEN }}
 
-  merge:
-    needs: approve
-    runs-on: ubuntu-latest
-    name: Merge
-    if: github.actor == 'dependabot[bot]'
-    
-    steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v2
-        with:
-          github-token: "${{ secrets.AUTO_MERGE_TOKEN }}"
-      
-      - name: Enable auto-merge for Dependabot PRs
-        run: gh pr merge --auto --squash "$PR_URL"
+      - name: Approve and Merge PR
+        run: |
+          gh pr review --approve "${{ github.event.pull_request.html_url }}"
+          gh pr merge --auto --squash "${{ github.event.pull_request.html_url }}"
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.AUTO_MERGE_TOKEN }}
