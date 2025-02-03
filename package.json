@@ -19,9 +19,9 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.50.0",
+    "@playwright/test": "^1.50.1",
     "@popperjs/core": "^2.11.6",
-    "@swc/core": "^1.10.9",
+    "@swc/core": "^1.10.12",
     "@swc/jest": "^0.2.37",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -30,8 +30,8 @@
     "@types/node": "*",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "@typescript-eslint/eslint-plugin": "^8.21.0",
-    "@typescript-eslint/parser": "^8.21.0",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
     "@vitejs/plugin-react-swc": "^3.7.2",
     "bootstrap-icons": "^1.11.3",
     "eslint": "^9.19.0",
