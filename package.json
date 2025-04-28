@@ -21,8 +21,8 @@
   "devDependencies": {
     "@playwright/test": "^1.52.0",
     "@popperjs/core": "^2.11.6",
-    "@swc/core": "^1.11.21",
-    "@swc/jest": "^0.2.37",
+    "@swc/core": "^1.11.22",
+    "@swc/jest": "^0.2.38",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
@@ -30,11 +30,11 @@
     "@types/node": "*",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
-    "@typescript-eslint/eslint-plugin": "^8.30.1",
-    "@typescript-eslint/parser": "^8.30.1",
+    "@typescript-eslint/eslint-plugin": "^8.31.0",
+    "@typescript-eslint/parser": "^8.31.0",
     "@vitejs/plugin-react-swc": "^3.9.0",
     "bootstrap-icons": "^1.11.3",
-    "eslint": "^9.25.0",
+    "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-prettier": "^5.2.6",
     "eslint-plugin-react": "^7.37.5",
@@ -45,6 +45,6 @@
     "ts-jest": "^29.3.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
-    "vite": "^6.3.2"
+    "vite": "^6.3.3"
   }
 }
