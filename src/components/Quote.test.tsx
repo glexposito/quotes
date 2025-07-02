@@ -17,7 +17,7 @@ describe('Quote component', () => {
 
   it('should display the quote when api returns ok', () => {
     mockedUseRandomQuoteQuery.mockImplementation(() => ({
-      data: { author: 'Aristotle', content: 'Knowing yourself is the beginning of all wisdom.' },
+      data: { author: 'Aristotle', quote: 'Knowing yourself is the beginning of all wisdom.' },
       isError: false
     }));
     render(<Quote />);
