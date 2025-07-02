@@ -23,7 +23,7 @@ export default function Quote() {
   const renderQuote = () => (
     <>
       <h1>{data.author}</h1>
-      <p className="lead">{data.content}</p>
+      <p className="lead">{data.quote}</p>
     </>
   );
 
