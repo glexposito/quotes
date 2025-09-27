@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+install-state.gz
+
 
 # Editor directories and files
 .vscode/*
