@@ -14,13 +14,13 @@
     "playwright:local": "URL=http://localhost:5173/ npx playwright test"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.90.2",
+    "@tanstack/react-query": "^5.90.5",
     "bootstrap": "^5.3.8",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.56.0",
+    "@playwright/test": "^1.56.1",
     "@popperjs/core": "^2.11.6",
     "@swc/core": "^1.13.20",
     "@swc/jest": "^0.2.39",
@@ -30,12 +30,12 @@
     "@types/jest": "^30.0.0",
     "@types/node": "*",
     "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.1",
-    "@typescript-eslint/eslint-plugin": "^8.46.0",
-    "@typescript-eslint/parser": "^8.46.0",
+    "@types/react-dom": "^19.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
     "@vitejs/plugin-react-swc": "^4.1.0",
     "bootstrap-icons": "^1.13.1",
-    "eslint": "^9.37.0",
+    "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.37.5",
@@ -45,7 +45,7 @@
     "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
-    "vite": "^7.1.9"
+    "vite": "^7.1.11"
   },
   "packageManager": "yarn@4.10.3"
 }
