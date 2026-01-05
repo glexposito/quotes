@@ -14,7 +14,7 @@
     "playwright:local": "URL=http://localhost:5173/ npx playwright test"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.90.14",
+    "@tanstack/react-query": "^5.90.16",
     "bootstrap": "^5.3.8",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@popperjs/core": "^2.11.6",
-    "@swc/core": "^1.15.7",
+    "@swc/core": "^1.15.8",
     "@swc/jest": "^0.2.39",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -31,8 +31,8 @@
     "@types/node": "*",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "@typescript-eslint/eslint-plugin": "^8.50.1",
-    "@typescript-eslint/parser": "^8.50.1",
+    "@typescript-eslint/eslint-plugin": "^8.51.0",
+    "@typescript-eslint/parser": "^8.51.0",
     "@vitejs/plugin-react-swc": "^4.2.2",
     "bootstrap-icons": "^1.13.1",
     "eslint": "^9.39.2",
